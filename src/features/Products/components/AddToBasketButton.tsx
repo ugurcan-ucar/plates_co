@@ -26,7 +26,7 @@ const AddToBasketButton = ({
       )}
     >
       <BasketIcon />
-      Add to Cart
+      Add to Basket
     </button>
   );
 };
