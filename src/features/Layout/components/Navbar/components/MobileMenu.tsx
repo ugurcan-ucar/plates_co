@@ -5,6 +5,7 @@ import HamburgerIcon from "@/components/Icons/HamburgerIcon";
 import { ROUTES } from "@/constants/routes";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import BasketIconWithBadge from "./BasketIconWithBadge";
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +25,10 @@ const MobileMenu = () => {
 
   return (
     <div className="md:hidden">
-      <HamburgerIcon width={32} height={32} onClick={() => setIsOpen(true)} />
+      <div className="flex gap-4">
+        <BasketIconWithBadge />
+        <HamburgerIcon width={32} height={32} onClick={() => setIsOpen(true)} />
+      </div>
 
       <div
         className={`fixed top-0 left-0 z-50 h-screen w-full transform bg-white transition-transform duration-300 md:hidden ${isOpen ? "translate-x-0" : "-translate-x-full"}`}

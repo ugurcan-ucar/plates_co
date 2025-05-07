@@ -1,6 +1,6 @@
 import { Plate } from "@type/Plate";
 
-export const MOCK_DATA: Plate[] = [
+export const MOCK_CATALOG: Plate[] = [
   {
     name: "Red Plate",
     description: "Some Red Plate Description",

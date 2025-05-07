@@ -1,5 +1,5 @@
+import { MOCK_CATALOG } from "@/constants/mockData";
 import { BasketItem } from "@/types/Basket";
-import { Plate } from "@/types/Plate";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface BasketState {
@@ -14,15 +14,20 @@ const basketSlice = createSlice({
   name: "basket",
   initialState,
   reducers: {
-    addToBasket: (state, action: PayloadAction<Plate>) => {
+    addToBasket: (state, action: PayloadAction<string>) => {
+      const catalogItem = MOCK_CATALOG.find(
+        (item) => item.code === action.payload,
+      );
+      if (!catalogItem) return;
+
       const existingItem = state.products.find(
-        (product) => product.code === action.payload.code,
+        (product) => product.code === action.payload,
       );
       if (existingItem) {
         existingItem.quantity++;
       } else {
         state.products.push({
-          ...action.payload,
+          ...catalogItem,
           quantity: 1,
         });
       }

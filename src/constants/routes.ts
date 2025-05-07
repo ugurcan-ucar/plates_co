@@ -9,6 +9,6 @@ export const ROUTES: Route[] = [
   {
     id: 2,
     name: "Products",
-    path: "/products",
+    path: "/",
   },
 ];

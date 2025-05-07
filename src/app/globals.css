@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+body {
+  overflow-y: scroll;
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  background-color: #eef2ff;
+  background-color: #ffffff;
+  background-color: #f5f3ff;
+}

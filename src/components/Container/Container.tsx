@@ -19,7 +19,7 @@ const Container = ({
         wrapperClassName,
       )}
     >
-      <div className={twMerge("w-full max-w-7xl px-8", className)}>
+      <div className={twMerge("w-full max-w-7xl px-2 md:px-8", className)}>
         {children}
       </div>
     </div>
