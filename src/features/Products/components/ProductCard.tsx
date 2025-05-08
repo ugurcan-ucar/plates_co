@@ -17,7 +17,7 @@ const ProductCard = ({ product }: { product: Plate }) => {
           className="object-cover transition duration-400 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-        <div className="absolute right-0 bottom-0 left-0 translate-y-full transform p-4 transition-transform duration-500 group-hover:translate-y-0">
+        <div className="absolute right-0 bottom-0 left-0 translate-y-full opacity-0 p-4 transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100">
           <AddToBasketButton productCode={product.code} />
         </div>
       </div>
